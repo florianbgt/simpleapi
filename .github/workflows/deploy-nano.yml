@@ -5,11 +5,9 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-      # Request build and stream output
-      - name: Build Serverless functions and deploy via Nano API
-        uses: Nano-API/Deploy@version/0
-        with:
-          apiKey: ${{ secrets.NANO_API_KEY }}
-          envName: 'test'
-          token: ${{ secrets.GITHUB_TOKEN }}
-          planId: 1
+        - name: Build and deploy via Nano API
+          uses: Nano-API/Deploy@version/0
+          with:
+            token: ${{ secrets.NANO_API_TOKEN }} // Your Nano API token, stored in Github secrets
+            buildConfigId: '666f3d4689f7083f804d27b4'
+            commitSha: ${{ github.sha }}
