@@ -12,9 +12,9 @@ jobs:
             buildConfigId: '668174e3ac627b492a82f7c6'
             commitSHA: ${{ github.sha }}
 
-        # - name: Build and deploy via Nano API 2
-        #   uses: Nano-API/Deploy@version/0
-        #   with:
-        #     apiKey: ${{ secrets.NANO_API_TOKEN }}
-        #     buildConfigId: '669e355cb6c83afcac133f32'
-        #     commitSHA: ${{ github.sha }}
+        - name: Build and deploy via Nano API 2
+          uses: Nano-API/Deploy@version/0
+          with:
+            apiKey: ${{ secrets.NANO_API_TOKEN }}
+            buildConfigId: '669e355cb6c83afcac133f32'
+            commitSHA: ${{ github.sha }}
