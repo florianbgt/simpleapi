@@ -1,0 +1,18 @@
+name: Download Tarball
+
+on: [push]
+jobs:
+  download-tarball:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Download tarball
+      run: |
+        curl -L -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -o repo.tar.gz \
+        https://api.github.com/repos/${{ github.repository }}/tarball
+      
+    - name: ls
+      run: ls -l
