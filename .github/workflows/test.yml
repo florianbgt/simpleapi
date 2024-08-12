@@ -15,4 +15,4 @@ jobs:
         https://api.github.com/repos/${{ github.repository }}/tarball
       
     - name: ls
-      run: ls -l
+      run: echo ls -l
