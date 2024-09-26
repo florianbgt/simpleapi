@@ -1,0 +1,34 @@
+id: 86b5d0bf-2304-48f7-ba81-2a9779ea903e
+clusterId: cluster-id
+organizationId: 1
+domain: simpleapi1.test.nanoapi.io
+servicePort: 5000
+envs:
+- key: PORT
+  value: "5000"
+secrets: []
+livenessProbe:
+  path: /health
+  periodSeconds: 1
+readinessProbe:
+  path: /ready
+  periodSeconds: 1
+  failureThresholdSeconds: 10
+startupProbe:
+  path: /startup
+  periodSeconds: 1
+  failureThresholdSeconds: 10
+adapter: docker
+scaleToZeroAfterInactivitySeconds: 300
+hpaConfig:
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    metricName: cpu
+    targetAverageValue: 250
+    targetAverageUtilization: 0
+  - type: Resource
+    metricName: memory
+    targetAverageValue: 500
+    targetAverageUtilization: 0
