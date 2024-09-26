@@ -7,9 +7,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Deploy service using NanoAPI
-      uses: Nano-API/Deploy@version/1
-      with:
-        apiKey: ${{ secrets.NANO_API_TEST_TOKEN }}
-        githubToken: ${{ secrets.GITHUB_TOKEN }}
-        stackName: simpleapi1
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run Nano-API Deploy
+        uses: Nano-API/Deploy@version/1
+        with:
+          apiKey: ${{ secrets.NANO_API_TEST_TOKEN }}
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          stackName: simpleapi1
