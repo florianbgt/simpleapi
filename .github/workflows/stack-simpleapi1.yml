@@ -14,5 +14,6 @@ jobs:
         uses: Nano-API/Deploy@version/1
         with:
           apiKey: ${{ secrets.NANO_API_TEST_TOKEN }}
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
           stackName: simpleapi1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
