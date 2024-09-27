@@ -19,7 +19,7 @@ startupProbe:
   periodSeconds: 1
   failureThresholdSeconds: 10
 adapter: docker
-scaleToZeroAfterInactivitySeconds: 
+scaleToZeroAfterInactivitySeconds: 300
 resources:
   requests:
     cpu: 200m
