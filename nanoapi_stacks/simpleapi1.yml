@@ -24,9 +24,6 @@ resources:
   requests:
     cpu: 200m
     memory: 50Mi
-  limits:
-    cpu: 500m
-    memory: 100Mi
 hpaConfig:
   minReplicas: 1
   maxReplicas: 10
