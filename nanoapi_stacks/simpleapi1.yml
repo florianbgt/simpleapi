@@ -19,7 +19,14 @@ startupProbe:
   periodSeconds: 1
   failureThresholdSeconds: 10
 adapter: docker
-scaleToZeroAfterInactivitySeconds: 300
+scaleToZeroAfterInactivitySeconds: 
+resources:
+  requests:
+    cpu: 200m
+    memory: 50Mi
+  limits:
+    cpu: 500m
+    memory: 100Mi
 hpaConfig:
   minReplicas: 1
   maxReplicas: 10
