@@ -27,8 +27,8 @@ hpaConfig:
   - type: Resource
     metricName: cpu
     targetAverageValue: 250
-    targetAverageUtilization: 0
+    targetAverageUtilization: 80
   - type: Resource
     metricName: memory
     targetAverageValue: 500
-    targetAverageUtilization: 0
+    targetAverageUtilization: 80
