@@ -1,7 +1,7 @@
 id: 86b5d0bf-2304-48f7-ba81-2a9779ea903e
 clusterId: europewest1b_testshard
 organizationId: 1
-domain: simpleapi.asgard-shard.test.nanoapi.io
+domain: simpleapi.asgard2-shard.test.nanoapi.io
 servicePort: 5000
 envs:
 - key: PORT
