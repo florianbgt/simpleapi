@@ -23,7 +23,7 @@ scaleToZeroAfterInactivitySeconds: 300
 resources:
   requests:
     cpu: 200m
-    memory: 50Mi
+    memory: 100Mi
 hpaConfig:
   minReplicas: 1
   maxReplicas: 10
